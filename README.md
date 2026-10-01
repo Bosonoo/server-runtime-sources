@@ -4,17 +4,25 @@ This repository distributes upstream source and build material for third-party
 components used by Bosonoo's server runtime images. It contains no Bosonoo
 application source, customer data, credentials or deployment configuration.
 
-## Source collection
+## Source collections
 
-[Download the Fedora 43 collection](https://github.com/Bosonoo/server-runtime-sources/releases/tag/fedora43-20260926).
-The release asset `fedora43-20260926-sources.tar` contains 50 unmodified Fedora
-source RPMs, totalling 294,397,467 source-archive bytes. Each source RPM contains
-its upstream sources, Fedora patches and RPM build specification. See
-[`source-index.json`](source-index.json) for exact versions, upstream download
-URLs, build identifiers and hashes. [`bundle.json`](bundle.json) identifies
-the complete bundle. These sources were not modified by Bosonoo.
+- [Fedora 43 update of 1 October 2026](https://github.com/Bosonoo/server-runtime-sources/releases/tag/fedora43-20261001).
+  The release asset `fedora43-20261001-sources.tar` contains one unmodified
+  Fedora source RPM, `systemd-258.11-1.fc43`, totalling 17,461,158
+  source-archive bytes. In Fedora 43 updates, it replaced `systemd-258.10-1.fc43`.
+- [Fedora 43 collection of 26 September 2026](https://github.com/Bosonoo/server-runtime-sources/releases/tag/fedora43-20260926).
+  The release asset `fedora43-20260926-sources.tar` contains 50 unmodified
+  Fedora source RPMs, totalling 294,397,467 source-archive bytes.
 
-The collection includes source for split binary packages from the same source
+Each source RPM contains its upstream sources, Fedora patches and RPM build
+specification. [`source-index.json`](source-index.json) records exact versions,
+upstream download URLs, build identifiers and hashes for the newest collection.
+[`bundle.json`](bundle.json) identifies that complete bundle. An earlier
+collection's index and `bundle.json` remain at its release tag; for example, see
+[`fedora43-20260926`](https://github.com/Bosonoo/server-runtime-sources/tree/fedora43-20260926).
+These sources were not modified by Bosonoo.
+
+The collections include source for split binary packages from the same source
 package. Inclusion here does not assert that every binary or optional component
 is installed in a deployed image, or that a runtime release is qualified.
 Runtime releases retain their own component inventory and notices.
@@ -24,8 +32,11 @@ Runtime releases retain their own component inventory and notices.
 Download the source archive and this repository's `bundle.json`, then run:
 
 ```sh
-python3 verify_bundle.py /path/to/fedora43-20260926-sources.tar
+python3 verify_bundle.py /path/to/fedora43-20261001-sources.tar
 ```
+
+To verify an earlier collection, first check out its tag, such as
+`git checkout fedora43-20260926`, then run the same command with that archive.
 
 Verification reads the archive without executing or extracting its source. It
 checks the complete bundle and every source RPM against the recorded SHA-256
@@ -47,7 +58,7 @@ record is identified by `kojiBuildId` in the index. To rebuild a package in a
 suitable Fedora development environment, for example:
 
 ```sh
-mock -r fedora-43-x86_64 sources/libffi-3.5.2-1.fc43.src.rpm
+mock -r fedora-43-x86_64 sources/systemd-258.11-1.fc43.src.rpm
 ```
 
 See the [Mock project's documentation](https://rpm-software-management.github.io/mock/).
