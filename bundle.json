@@ -1,13 +1,13 @@
 {
   "schema": "bosonoo.source-bundle/v1",
-  "filename": "fedora43-20261001-sources.tar",
-  "bytes": 17469440,
-  "sha256": "56edb51d2cc4c3b756b470e74f1982b2d7a4a75790f5174ff2283937f172d569",
+  "filename": "fedora43-20261007-sources.tar",
+  "bytes": 21381120,
+  "sha256": "ec5ad744cbea74f99fb86d4699994764fed8e5e02b7ccae4f1968eb475452e0f",
   "sourceArchives": [
     {
-      "filename": "systemd-258.11-1.fc43.src.rpm",
-      "bytes": 17461158,
-      "sha256": "438f483d45e49a29e53141864708907d0444b648e2b1e47341e42e5b904425e5"
+      "filename": "glibc-2.42-17.fc43.src.rpm",
+      "bytes": 21374029,
+      "sha256": "ca9e654a43cd3555b09f2d0c3711e3cf5dc11ac1d985053feb030a28e3675268"
     }
   ]
 }

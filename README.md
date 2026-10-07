@@ -6,6 +6,10 @@ application source, customer data, credentials or deployment configuration.
 
 ## Source collections
 
+- [Fedora 43 update of 7 October 2026](https://github.com/Bosonoo/server-runtime-sources/releases/tag/fedora43-20261007).
+  The release asset `fedora43-20261007-sources.tar` contains one unmodified
+  Fedora source RPM, `glibc-2.42-17.fc43`, totalling 21,374,029
+  source-archive bytes. In Fedora 43 updates, it replaced `glibc-2.42-16.fc43`.
 - [Fedora 43 update of 1 October 2026](https://github.com/Bosonoo/server-runtime-sources/releases/tag/fedora43-20261001).
   The release asset `fedora43-20261001-sources.tar` contains one unmodified
   Fedora source RPM, `systemd-258.11-1.fc43`, totalling 17,461,158
@@ -18,8 +22,9 @@ Each source RPM contains its upstream sources, Fedora patches and RPM build
 specification. [`source-index.json`](source-index.json) records exact versions,
 upstream download URLs, build identifiers and hashes for the newest collection.
 [`bundle.json`](bundle.json) identifies that complete bundle. An earlier
-collection's index and `bundle.json` remain at its release tag; for example, see
-[`fedora43-20260926`](https://github.com/Bosonoo/server-runtime-sources/tree/fedora43-20260926).
+collection's index and `bundle.json` remain at its release tag; see
+[`fedora43-20261001`](https://github.com/Bosonoo/server-runtime-sources/tree/fedora43-20261001)
+and [`fedora43-20260926`](https://github.com/Bosonoo/server-runtime-sources/tree/fedora43-20260926).
 These sources were not modified by Bosonoo.
 
 The collections include source for split binary packages from the same source
@@ -32,11 +37,11 @@ Runtime releases retain their own component inventory and notices.
 Download the source archive and this repository's `bundle.json`, then run:
 
 ```sh
-python3 verify_bundle.py /path/to/fedora43-20261001-sources.tar
+python3 verify_bundle.py /path/to/fedora43-20261007-sources.tar
 ```
 
 To verify an earlier collection, first check out its tag, such as
-`git checkout fedora43-20260926`, then run the same command with that archive.
+`git checkout fedora43-20261001`, then run the same command with that archive.
 
 Verification reads the archive without executing or extracting its source. It
 checks the complete bundle and every source RPM against the recorded SHA-256
@@ -58,7 +63,7 @@ record is identified by `kojiBuildId` in the index. To rebuild a package in a
 suitable Fedora development environment, for example:
 
 ```sh
-mock -r fedora-43-x86_64 sources/systemd-258.11-1.fc43.src.rpm
+mock -r fedora-43-x86_64 sources/glibc-2.42-17.fc43.src.rpm
 ```
 
 See the [Mock project's documentation](https://rpm-software-management.github.io/mock/).

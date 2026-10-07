@@ -1,22 +1,22 @@
 {
   "schema": "bosonoo.public-third-party-sources/v1",
-  "collection": "fedora43-20261001",
+  "collection": "fedora43-20261007",
   "description": "Unmodified Fedora source RPMs, with upstream sources, Fedora patches and RPM build specifications.",
   "signatureVerification": "Verified Fedora signed main headers bind complete compressed source payloads. Distributed full archives are the official unsigned Koji archives; their complete byte hashes are below.",
   "sources": [
     {
-      "filename": "systemd-258.11-1.fc43.src.rpm",
-      "bytes": 17461158,
-      "sha256": "438f483d45e49a29e53141864708907d0444b648e2b1e47341e42e5b904425e5",
-      "sourceNvr": "systemd-258.11-1.fc43",
-      "kojiBuildId": 3102150,
-      "officialSourceUrl": "https://kojipkgs.fedoraproject.org/packages/systemd/258.11/1.fc43/src/systemd-258.11-1.fc43.src.rpm",
-      "officialSignedPrefixUrl": "https://kojipkgs.fedoraproject.org/packages/systemd/258.11/1.fc43/data/signed/31645531/src/systemd-258.11-1.fc43.src.rpm",
+      "filename": "glibc-2.42-17.fc43.src.rpm",
+      "bytes": 21374029,
+      "sha256": "ca9e654a43cd3555b09f2d0c3711e3cf5dc11ac1d985053feb030a28e3675268",
+      "sourceNvr": "glibc-2.42-17.fc43",
+      "kojiBuildId": 3110441,
+      "officialSourceUrl": "https://kojipkgs.fedoraproject.org/packages/glibc/2.42/17.fc43/src/glibc-2.42-17.fc43.src.rpm",
+      "officialSignedPrefixUrl": "https://kojipkgs.fedoraproject.org/packages/glibc/2.42/17.fc43/data/signed/31645531/src/glibc-2.42-17.fc43.src.rpm",
       "fedoraSignerFingerprint": "C6E7F081CF80E13146676E88829B606631645531",
-      "signedHeaderSha256": "170540b0a7af1f3efc7fdbf077973480ff19d72570f1035bf5f9622a11621f4d",
-      "signedPayloadSha256": "550ed563286c9ec44274da669bbd44ca6616733aee98c8ca7c49504f39582d76",
-      "sourceSpec": "systemd.spec",
-      "sourceMemberCount": 29,
+      "signedHeaderSha256": "cdf129bd5ad7011d997589647c260df566f9e27ec46978a4867bfd963f9d3912",
+      "signedPayloadSha256": "41c392ad81ae3226f30d0f0ad634572b454e300282fc8c72ef50ce1e506f7489",
+      "sourceSpec": "glibc.spec",
+      "sourceMemberCount": 13,
       "modificationsByBosonoo": "none"
     }
   ]
